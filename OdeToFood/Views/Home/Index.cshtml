@@ -1,0 +1,20 @@
+﻿@model OdeToFood.ViewModels.HomeIndexViewModel
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>@Model.CurrentMessage</h1>
+    <table>
+        @foreach (var restaurant in Model.Restaurants) //Model is the Model Object that was passed in to the ViewResult.
+        {
+            <tr>
+                <td>@restaurant.ID</td>
+                <td>@restaurant.Name</td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>
